@@ -1,0 +1,14 @@
+h1{
+    color:brown ;
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+}
+
+h1:hover {
+color: rgb(216, 151, 10);
+font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+img:hover {
+    box-shadow: 0 0 10px 5px rgba(230, 183, 29, 0.932);
+}
