@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="style1.css"/>
+      <title>Login Page</title>
+      <script>   
+        function validate() 
+        {  
+            var email = document.getElementById('email').value; 
+            var password = document.getElementById('password').value; 
+            if (email === '' ){
+              alert('Email address cannot be empty');
+              document.getElementById("email").focus();
+              return false;
+            }
+            if(email.indexOf('@')==-1)
+            {
+              alert('Invalid email address. Enter correct email address.');
+              document.getElementById("email").focus();
+              return false;
+            }
+            if(password === '') { 
+              alert('Password field cannot be empty. Enter correct password');  
+              document.getElementById("password").focus();
+              return false;
+            }
+            else {    
+              alert('Login successful!');   
+              document.getElementById("myform").reset(); 
+              return true;
+            }
+        }      
+      </script>
+   </head>
+   <body>
+      <div class="container flex">
+         <div class="facebook flex">
+            <div class="text">
+               <h1>facebook</h1>
+               <p>Facebook helps you connect and share </p>
+               <p>with the people in your life.</p>
+            </div>
+            <div class="form-container" >
+               <form id="myform" action="#">
+                  <input type="email" id="email"  placeholder="Email address or phone number" required>  
+                  <input type="password" id="password"  placeholder="Password" required>    
+                  <div class="link">        
+                     <button type="button" onclick=" validate()" class="login">Login</button>  
+                     <a href="#" class="forgot">Forgotten password?</a>       
+                  </div>
+                  <hr>
+                  <div class="button">      
+                     <a href="#">Create new account</a>    
+                  </div>
+               </form>
+               <p style="font-size :15px; width:min-content;padding-top: 30px;"><b>Create a Page</b> for a celebrity, brand, or business.</p>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
