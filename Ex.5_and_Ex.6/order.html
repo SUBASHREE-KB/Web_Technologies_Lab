@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Place Order!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eeda99;
+            background-image: url('order1.webp');
+            background-repeat: no-repeat; 
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        textarea,
+        select {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="checkbox"]+label {
+            margin-left: 5px;
+        }
+
+        input[type="submit"],
+        input[type="button"] {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover,
+        input[type="button"]:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="session1" method="post" onsubmit="return validateForm()">
+        <h1>Place Order!</h1>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required><br>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" required></textarea><br>
+
+        <label>Items to Order:</label><br>
+        <label class="checkbox-label"><input type="checkbox" id="item1" name="items" value="Cappuccino"> Cappuccino</label>
+        <label class="checkbox-label"><input type="checkbox" id="item2" name="items" value="Choco Truffles"> Choco Truffles</label>
+        <label class="checkbox-label"><input type="checkbox" id="item3" name="items" value="Tutty Red Cookies"> Tutty Red Cookies</label>
+        <br><br>
+        <div style="text-align: center;">
+            <input type="submit" value="Place Order">
+            <input type="button" value="Cancel Order" onclick="cancelOrder()">
+        </div>
+    </form>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value.trim();
+            var phone = document.getElementById("phone").value.trim();
+            var address = document.getElementById("address").value.trim();
+
+            if (name.length<3) {
+                alert("Please enter your name");
+                document.getElementById("name").focus();
+                return false;
+            }
+
+            if (!/^\d{10}$/.test(phone)) {
+                alert("Please enter a valid 10-digit phone number");
+                document.getElementById("phone").focus();
+
+                return false;
+            }
+            if(phone.charAt(0)=='0')
+            {
+                alert("Phone number cannot start with 0");
+                document.getElementById("phone").focus();
+                return false;
+            }
+
+            if (address === "") {
+                alert("Please enter your address");
+                document.getElementById("address").focus();
+                return false;
+            }
+            if (address.length <= 20) {
+                alert("Please full and correct address");
+                document.getElementById("address").focus();
+                return false;
+            }
+            var checkbox = document.getElementsByName("items");
+            var ischecked = false;
+            for (var i = 0; i < checkbox.length; i++) {
+                if (checkbox[i].checked) {
+                    ischecked = true;
+                    break;
+                }
+            }
+
+            if (!ischecked) {
+                alert("Please select at least one item to place order");
+                document.getElementById("checkbox").focus();
+                return false;
+            }
+
+            alert("Order placed successfully!");
+            return true;
+        }
+
+        function cancelOrder() {
+            if (confirm("Are you sure you want to cancel your order?")) {
+                alert("Order canceled!");
+                window.location.href = "index.html";
+            }
+        }
+    </script>
+</body>
+</html>
