@@ -1,0 +1,201 @@
+/*Styling for body in all web pages*/
+body {
+    margin:0;
+    padding: 0;
+    background-color: cornsilk;
+}
+/* Animation for the navigation bar in all webpages */
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    animation-name: slideInRightToLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    transition: right 1s ease-in-out;
+    transition-duration: 2s, 2s;
+}
+
+/* Keyframes for the slide-in animation */
+@keyframes slideInRightToLeft {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/*Style for top.html*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover{
+  background-color: rgb(155, 143, 143);
+  
+}
+.login-btn {
+    float:right;
+    color: white;
+    text-decoration: none;
+}
+/*Styling for index.html*/
+.imgdiv{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(243, 213, 132, 0.863);
+    
+}
+
+.mySlides {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto; 
+    height: auto; 
+}
+.item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    width: 300px;
+    display: inline-block;
+    align-items: center;
+}
+.textdiv{
+    color:rgb(141, 36, 109);
+    text-align:center;
+    position:relative;
+}
+
+/* Style for cart.html */
+.addtocart {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    /*Transition Effect time*/
+    transition: width 2s, height 4s;
+}
+
+.addtocart:hover {
+    background-color: #0056b3;
+}
+.itemimag {
+    max-width: 200px; 
+    max-height: 200px;
+    width: auto;
+    height: auto; 
+}
+.item:hover{
+    /* Scaling Both X and Y axis */
+    transform: scale(1.1,1.1);
+    transition: width 2s height 4s;
+}
+
+.cartdiv {
+    margin-top: auto; 
+    align-items: center;
+    text-align: center;
+}
+
+/*Style for description.html*/
+
+.descriptiondiv {
+    margin-top: 60px; 
+    padding: 5px;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.items {
+    border: 1px solid #ddd;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    background-color: #f9f9f9;
+    display: inline-block;
+}
+
+.items h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color:rgb(78, 35, 4);
+}
+
+.itemscontent {
+    display: flex;
+    align-items: center; 
+}
+
+.itemsimage {
+    flex: 1;
+    width: 200px; 
+    height: 200px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7c704d; 
+    overflow: hidden; 
+}
+
+.itemsimage img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+
+.itemsdetails {
+    flex: 2;
+    padding: 10px;
+    text-align: left; 
+}
+
+.itemsimage:hover{
+    /* Skew Transformation */
+    transform: skewX(-20deg); 
+}
+/*Animation with bouncing effect of Heading*/
+.items h2 {
+    animation-name: bounce;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+/*Keyframes for bouncing effect*/
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
