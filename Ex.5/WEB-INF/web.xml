@@ -1,0 +1,23 @@
+<web-app>  
+    <!-- Program myservlet.java -->
+    <servlet>
+        <servlet-name>myservlet</servlet-name>
+        <servlet-class>myservlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>myservlet</servlet-name>
+        <url-pattern>/myservlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Program myorder.java -->
+    <servlet>
+        <servlet-name>myorder</servlet-name>
+        <servlet-class>myorder</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>myorder</servlet-name>
+        <url-pattern>/myorder</url-pattern>
+    </servlet-mapping>
+</web-app>
