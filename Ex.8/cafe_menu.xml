@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cafeMenu>
+    <category name="Coffee">
+        <item>
+            <name>Espresso</name>
+            <price>Rs.280</price>
+        </item>
+        <item>
+            <name>Cappuccino</name>
+            <price>Rs.300</price>
+        </item>
+        <item>
+            <name>Cold Coffee</name>
+            <price>Rs.100</price>
+        </item>
+        <item>
+            <name>Java Chip Frappucino</name>
+            <price>Rs.150</price>
+        </item>
+    </category>
+
+    <category name="Tea">
+        <item>
+            <name>Green Tea</name>
+            <price>Rs.100</price>
+        </item>
+        <item>
+            <name>Masala Tea</name>
+            <price>Rs.250</price>
+        </item>
+        <item>
+            <name>Hibiscus Tea</name>
+            <price>Rs.150</price>
+        </item>
+    </category>
+    <category name="Cookies">
+        <item>
+            <name>Chocolate Chip</name>
+            <price>Rs.120</price>
+        </item>
+        <item>
+            <name>Oatmeal Raisin</name>
+            <price>Rs.100</price>
+        </item>
+        <item>
+            <name>Sugar Cookie</name>
+            <price>Rs.50</price>
+        </item>
+    </category>
+    <category name="Starters">
+        <item>
+            <name>Parmesan Crusted Potatoes</name>
+            <price>Rs.120</price>
+        </item>
+        <item>
+            <name>Sweet Corn Chaat</name>
+            <price>Rs.75</price>
+        </item>
+        <item>
+            <name>Paneer Tikka</name>
+            <price>Rs.200</price>
+        </item>
+    </category>
+</cafeMenu>
